@@ -1,0 +1,109 @@
+$White: hsl(0, 0%, 100%)
+$White_very_transparent: hsla(0, 0%, 100%, .04)
+$Light_Grey: hsl(217, 12%, 63%)
+$Medium_Grey: hsl(216, 12%, 54%)
+$Dark_Blue: hsl(213, 19%, 18%)
+$Very_Dark_Blue: hsl(216, 12%, 8%)
+$Star_orange: hsl(25, 97%, 53%)
+
+    
+@font-face 
+    font-family: "Overpass"
+    src: url("./fonts/Overpass-VariableFont_wght.ttf")
+
+@mixin round-back-div()
+    display: inline-block
+    width:3em
+    height:3em
+    background-color: $White_very_transparent
+    border-radius: 50%
+
+@mixin state-window()
+    position: absolute
+    background-color: hsl(213, 19%, 18%)
+    width: 40ch
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 15px
+    padding: 1em
+
+*
+    margin: 0
+    padding: 0
+
+body
+    background-color: $Very_Dark_Blue
+    color: $Light_Grey
+
+p
+    font-family: Overpass, sans
+    font-size: 15px
+    line-height: 1em
+
+.rating-state
+    @include state-window()
+    h1
+        font-family: Overpass, sans
+        color: white
+        margin-top: 1em
+        margin-bottom: .5em
+    p
+        width: 34ch
+
+
+#star 
+    @include round-back-div()    
+    img
+        transform: translate(1em, 1em)
+
+.rating-selection
+    display: grid
+    grid-template-columns: auto auto auto auto auto
+    gap: 1em
+    margin: 1.5em 0
+
+    div
+        @include round-back-div()
+        p
+            transform: translate(1.25em, 1em)
+            
+    // div:hover
+    //     background-color: $Light_Grey
+    //     color: $White
+        
+
+
+button
+    background-color: $Star_orange
+    color: white
+    border: none
+    font-family: Overpass
+    width: 95%
+    height: 3.5em
+    text-align: center
+    text-decoration: none
+    border-radius: 25px
+    font-size: 14px
+    text-transform: uppercase
+    letter-spacing: 5px
+    margin: 1em 0
+button:hover
+    background-color: $White
+    color: $Star_orange
+
+
+
+
+.thank-you-state
+    display: none
+
+.attribution
+    font-size: 11px
+    bottom: 0
+    position: fixed
+    a
+        color: hsl(228,  45%, 44%)
+
+
+
