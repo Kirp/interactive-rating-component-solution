@@ -18,6 +18,11 @@ p {
   line-height: 1em;
 }
 
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
 .rating-state {
   position: absolute;
   background-color: hsl(213deg, 19%, 18%);
@@ -27,6 +32,8 @@ p {
   transform: translate(-50%, -50%);
   border-radius: 15px;
   padding: 1em;
+  display: block;
+  flex-direction: column;
 }
 .rating-state h1 {
   font-family: Overpass, sans;
@@ -37,36 +44,33 @@ p {
 .rating-state p {
   width: 34ch;
 }
-
-#star {
+.rating-state #star {
   display: inline-block;
   width: 3em;
   height: 3em;
   background-color: hsla(0deg, 0%, 100%, 0.04);
   border-radius: 50%;
 }
-#star img {
+.rating-state #star img {
   transform: translate(1em, 1em);
 }
-
-.rating-selection {
+.rating-state .rating-selection {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   gap: 1em;
   margin: 1.5em 0;
 }
-.rating-selection div {
+.rating-state .rating-selection .outer-select {
   display: inline-block;
   width: 3em;
   height: 3em;
   background-color: hsla(0deg, 0%, 100%, 0.04);
   border-radius: 50%;
 }
-.rating-selection div p {
+.rating-state .rating-selection .outer-select div {
   transform: translate(1.25em, 1em);
 }
-
-button {
+.rating-state button {
   background-color: hsl(25deg, 97%, 53%);
   color: white;
   border: none;
@@ -81,20 +85,51 @@ button {
   letter-spacing: 5px;
   margin: 1em 0;
 }
-
-button:hover {
+.rating-state button:hover {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(25deg, 97%, 53%);
 }
 
 .thank-you-state {
+  position: absolute;
+  background-color: hsl(213deg, 19%, 18%);
+  width: 40ch;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 1em;
   display: none;
+  flex-direction: column;
+}
+.thank-you-state img {
+  margin: 1em auto;
+}
+.thank-you-state #selection_count {
+  background-color: hsla(0deg, 0%, 100%, 0.04);
+  text-align: center;
+  width: 60%;
+  padding-top: 0.7em;
+  padding-bottom: 0.6em;
+  border-radius: 15px;
+  color: hsl(25deg, 97%, 53%);
+  margin: 1em auto;
+}
+.thank-you-state h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-family: Overpass;
+  font-weight: 500;
+  margin: 1em auto;
+}
+.thank-you-state p {
+  text-align: center;
+  line-height: 1.5em;
 }
 
 .attribution {
   font-size: 11px;
-  bottom: 0;
   position: fixed;
+  bottom: 0;
 }
 .attribution a {
   color: hsl(228deg, 45%, 44%);
