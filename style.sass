@@ -21,7 +21,9 @@ $Star_orange: hsl(25, 97%, 53%)
 @mixin state-window()
     position: absolute
     background-color: hsl(213, 19%, 18%)
-    width: 40ch
+    width: 85%
+    max-width: 40ch
+    min-width: 28ch    
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
@@ -55,7 +57,8 @@ main
         margin-top: 1em
         margin-bottom: .5em
     p
-        width: 34ch
+        width: 95%
+        line-height: 1.75em
 
 
     #star 
@@ -66,9 +69,7 @@ main
     .rating-selection
         display: grid
         grid-template-columns: auto auto auto auto auto
-        gap: 1em
         margin: 1.5em 0
-
         .outer-select
             @include round-back-div()
             div

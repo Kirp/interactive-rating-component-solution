@@ -26,7 +26,9 @@ main {
 .rating-state {
   position: absolute;
   background-color: hsl(213deg, 19%, 18%);
-  width: 40ch;
+  width: 85%;
+  max-width: 40ch;
+  min-width: 28ch;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,7 +44,8 @@ main {
   margin-bottom: 0.5em;
 }
 .rating-state p {
-  width: 34ch;
+  width: 95%;
+  line-height: 1.75em;
 }
 .rating-state #star {
   display: inline-block;
@@ -57,7 +60,6 @@ main {
 .rating-state .rating-selection {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  gap: 1em;
   margin: 1.5em 0;
 }
 .rating-state .rating-selection .outer-select {
@@ -93,7 +95,9 @@ main {
 .thank-you-state {
   position: absolute;
   background-color: hsl(213deg, 19%, 18%);
-  width: 40ch;
+  width: 85%;
+  max-width: 40ch;
+  min-width: 28ch;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
